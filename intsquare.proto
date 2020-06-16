@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option java_package = "ex.grpc";
+
+package intsquare;
+
+service IntSquare {
+    rpc sendRequest(IntRequest) returns (IntReply) {}
+}
+
+message IntRequest {
+    int32 x = 1;
+}
+
+message IntReply {
+    int32 xsq = 1;
+}
